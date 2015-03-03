@@ -3,8 +3,9 @@
 <form class="form-inline">
   <label for="twizzer">Which Twizzard art thou?</label>
   {{input id="twizzer" class="form-control" value=twizzard}}
+  <br>
   <label for="twizzled">Care to twizz?</label>
-  {{input id="twizzled" class="form-control" value=twizzle}}
+  {{textarea maxlength="141" id="twizzled" class="form-control" value=twizzle}}
   <button {{action 'newTwizzle'}}>Twizz!</button>
 </form>
 
