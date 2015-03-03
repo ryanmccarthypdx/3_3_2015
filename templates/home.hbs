@@ -1,7 +1,15 @@
 <h2>Here are your twizzles:</h2>
 
+<form class="form-inline">
+  <label for="twizzard">Which Twizzard art thou?</label>
+  {{input id="twizzard" class="form-control" value=twizzard}}
+  <label for="twizzle">Care to twizz?</label>
+  {{input id="twizzle" class="form-control" value=twizzle}}
+  <button {{action 'newTwizzle'}}>Twizz!</button>
+</form>
+
 <ul>
   {{#each}}
-    <li>{{content}}</li>
+    <li>{{twizzle}}</li>
   {{/each}}
 </ul>
