@@ -12,6 +12,7 @@ Twizzler.TwizzleController = Ember.ObjectController.extend({
       var tempArray = this.get('replies');
       tempArray.push(this.get('reply'));
       this.set('replies', tempArray);
+debugger;
     }
   }
 });
