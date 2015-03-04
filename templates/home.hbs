@@ -10,7 +10,15 @@
 </form>
 
 <ul>
-  {{#each}}
-    <li>{{twizzle}}</li>
+  {{#each controller}}
+    <li {{action 'toggleDisplay'}}><em><strong>{{twizzard}}</strong></em>: {{twizzle}}</li>
+      {{#if currentDisplay}}
+        {{datestamp}}
+          <form class="form-inline">
+            <label for="reply">Reply to this twizzle</label>
+            {{input id="reply" class="form-control" value=reply}}
+            <button {{action 'replyToTwizzle' reply}}>Comment</button>
+          </form>
+      {{/if}}
   {{/each}}
 </ul>
